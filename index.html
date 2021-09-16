@@ -1,17 +1,26 @@
-<form id="question" name="question" onsubmit="check(); return false;">
-<ul>
-<li>
-<p>創作が好きである。</p>
-<label><input name="q0" type="radio" value="Y" required="" />はい</label><br />
-<label><input name="q0" type="radio" value="N" />いいえ</label><br />
-<li>
-<p>差別はよくない</p>
-<label><input name="q1" type="radio" value="N" required="" />はい</label><br />
-<label><input name="q1" type="radio" value="Y" />いいえ</label><br />
-<li>
-<p>説明書はよく読むタイプだ</p>
-<label><input name="q2" type="radio" value="Y" required="" />はい</label><br />
-<label><input name="q2" type="radio" value="N" />いいえ</label><br />
-</ul>
-<input type="submit" value="判定！" class="result" /></form>
-<div id="result">結果</div>
+<html lang="ja"> 
+  <head>
+    <meta charset="utf-8">
+    <title>適性検査</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <form id="question" name="question" onsubmit="check(); return false;">
+      <ul>
+        <li>
+          <p>創作が好きである。</p>
+          <label><input name="q0" type="radio" value="Y" required="" />はい</label><br />
+          <label><input name="q0" type="radio" value="N" />いいえ</label><br />
+        <li>
+          <p>差別はよくない</p>
+          <label><input name="q1" type="radio" value="N" required="" />はい</label><br />
+          <label><input name="q1" type="radio" value="Y" />いいえ</label><br />
+        <li>
+          <p>説明書はよく読むタイプだ</p>
+          <label><input name="q2" type="radio" value="Y" required="" />はい</label><br />
+          <label><input name="q2" type="radio" value="N" />いいえ</label><br />
+      </ul>
+      <input type="submit" value="判定！" class="result" /></form>
+    <div id="result">結果</div>
+  </body>
+</html>
