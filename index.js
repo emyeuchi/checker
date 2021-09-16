@@ -22,11 +22,11 @@ function check() {
     }
     //コメントの条件分岐
     var message = "";
-    if (bbb = 3) {
+    if (aaa = 3) {
         message = "塑史向いてないよ";
-    } else if (bbb = 2) {
+    } else if (aaa = 2) {
         message = "頑張ろう";
-    } else if (bbb = 1) {
+    } else if (aaa = 1) {
         message = "「なかなか」やるな";
     } else {
         message = "あなたは塑史合格です！ 死んだ方がいいよ";
