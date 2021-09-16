@@ -38,4 +38,3 @@ function check() {
     html += '</div>';
     document.getElementById("result").innerHTML = html;
 }
-}
