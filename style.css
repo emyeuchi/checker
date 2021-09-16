@@ -9,7 +9,6 @@
 #question ul {
   list-style: none;
   margin: 0;
-  display: flex;
 }
 /*ラジオボタンとテキストの間に余白を入れる*/
 #question input[type="radio"] {
