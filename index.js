@@ -30,11 +30,4 @@
         $('#answer_02').css("display","");//回答2
     }
   });
-    //HTMLへ出力
-    var html = '<div>';
-    html += '人間的=' + aaa + '個<br>';
-    html += '塑史的=' + bbb + '個<br>';
-    html += '' + message + '';
-    html += '</div>';
-    document.getElementById("result").innerHTML = html;
-}
+
