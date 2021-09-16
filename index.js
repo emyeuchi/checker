@@ -1,36 +1,35 @@
-function check() {
-    let str = [];
-    //ラジオボタンの中身を取得
-    const q = [document.question.q0, document.question.q1, document.question.q2];
-  
-  //A・B・Cそれぞれの合計点数を入れるための変数
-    var aaa = 0;
-    var bbb = 0;
-    //どのラジオボタンが選択されたか判定し、点数を加算
-    for (let n = 0; n < q.length; n++) {
-        for (let i = 0; i < q[n].length; i++) {
-            if (q[n][i].checked) {
-                str[n] = q[n][i].value;
-                if (str[n] == "A") {
-                    aaa++;
-                } else if (str[n] == "B") {
-                    bbb++;
-                } 
-                break;
-            }
-        }
+//ボタンを押すごとに画面が切り替わる関数
+  $(function () {
+    $(".btn").on("click", function () {
+      $(this).closest("div").css("display", "none");
+      id = $(this).attr("href");
+      $(id).addClass("fit").fadeIn("slow").show();
+    });
+      
+      //選択ボタンデータを配列に入れてカウントする関数
+      var countA;
+      var countB;
+      var box =[];
+    $(".btn").each(function(){
+      $(this).on('click',function(){
+        var value = $(this).data("value");
+         box.push(value);
+        countA = box.filter(function(x){
+                      return x === "a"
+                    }).length;
+        countB = box.filter(function(y){
+                        return y === "b"
+                    }).length;
+      });
+    });
+      //結果を出力する関数
+    $('.end').on('click',function(){
+      if( countA > countB ) {
+        $('#answer_01').css("display",""); //回答1
+      } else {
+        $('#answer_02').css("display","");//回答2
     }
-    //コメントの条件分岐
-    var message = "";
-    if (aaa = 3) {
-        message = "塑史向いてないよ";
-    } else if (aaa = 2) {
-        message = "頑張ろう";
-    } else if (aaa = 1) {
-        message = "「なかなか」やるな";
-    } else {
-        message = "あなたは塑史合格です！ 死んだ方がいいよ";
-    }
+  });
     //HTMLへ出力
     var html = '<div>';
     html += '人間的=' + aaa + '個<br>';
